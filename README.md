@@ -1,12 +1,8 @@
 
 # ysoserial
 
-[![Join the chat at https://gitter.im/frohoff/ysoserial](
-    https://badges.gitter.im/frohoff/ysoserial.svg)](
-    https://gitter.im/frohoff/ysoserial?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Download Latest Snapshot](https://img.shields.io/badge/download-master-green.svg)](
-    https://jitpack.io/com/github/frohoff/ysoserial/master-SNAPSHOT/ysoserial-master-SNAPSHOT.jar)
-[![Travis Build Status](https://api.travis-ci.org/frohoff/ysoserial.svg?branch=master)](https://travis-ci.org/frohoff/ysoserial)
+[![GitHub release](https://img.shields.io/github/downloads/frohoff/ysoserial/latest/total)](https://github.com/frohoff/ysoserial/releases/latest/download/ysoserial-all.jar)
+[![Travis Build Status](https://api.travis-ci.com/frohoff/ysoserial.svg?branch=master)](https://travis-ci.com/frohoff/ysoserial)
 [![Appveyor Build status](https://ci.appveyor.com/api/projects/status/a8tbk9blgr3yut4g/branch/master?svg=true)](https://ci.appveyor.com/project/frohoff/ysoserial/branch/master)
 
 A proof-of-concept tool for generating payloads that exploit unsafe Java object deserialization.
@@ -47,8 +43,10 @@ Usage: java -jar ysoserial.jar [payload] '[command]'
   Available payload types:
      Payload             Authors                     Dependencies
      -------             -------                     ------------
+     AspectJWeaver       @Jang                       aspectjweaver:1.9.2, commons-collections:3.2.2
      BeanShell1          @pwntester, @cschneider4711 bsh:2.0b5
      C3P0                @mbechler                   c3p0:0.9.5.2, mchange-commons-java:0.2.11
+     Click1              @artsploit                  click-nodeps:2.3.0, javax.servlet-api:3.1.0
      Clojure             @JackOfMostTrades           clojure:1.8.0
      CommonsBeanutils1   @frohoff                    commons-beanutils:1.9.2, commons-collections:3.1, commons-logging:1.2
      CommonsCollections1 @frohoff                    commons-collections:3.1
@@ -57,6 +55,7 @@ Usage: java -jar ysoserial.jar [payload] '[command]'
      CommonsCollections4 @frohoff                    commons-collections4:4.0
      CommonsCollections5 @matthias_kaiser, @jasinner commons-collections:3.1
      CommonsCollections6 @matthias_kaiser            commons-collections:3.1
+     CommonsCollections7 @scristalli, @hanyrax, @EdoardoVignati commons-collections:3.1
      FileUpload1         @mbechler                   commons-fileupload:1.3.1, commons-io:2.4
      Groovy1             @frohoff                    groovy:2.3.9
      Hibernate1          @mbechler
@@ -69,12 +68,14 @@ Usage: java -jar ysoserial.jar [payload] '[command]'
      Jdk7u21             @frohoff
      Jython1             @pwntester, @cschneider4711 jython-standalone:2.5.2
      MozillaRhino1       @matthias_kaiser            js:1.7R2
+     MozillaRhino2       @_tint0                     js:1.7R2
      Myfaces1            @mbechler
      Myfaces2            @mbechler
      ROME                @mbechler                   rome:1.0
      Spring1             @frohoff                    spring-core:4.1.4.RELEASE, spring-beans:4.1.4.RELEASE
      Spring2             @mbechler                   spring-core:4.1.4.RELEASE, spring-aop:4.1.4.RELEASE, aopalliance:1.0, commons-logging:1.2
      URLDNS              @gebl
+     Vaadin1             @kai_ullrich                vaadin-server:7.7.14, vaadin-shared:7.7.14
      Wicket1             @jacob-baines               wicket-util:6.23.0, slf4j-api:1.6.4
 ```
 
@@ -98,14 +99,9 @@ $ java -cp ysoserial.jar ysoserial.exploit.RMIRegistryExploit myhost 1099 Common
 
 ## Installation
 
-1. Download the latest jar from
-[JitPack](https://jitpack.io/com/github/frohoff/ysoserial/master-SNAPSHOT/ysoserial-master-SNAPSHOT.jar)
-[![Download Latest Snapshot](https://img.shields.io/badge/download-master-green.svg)](
-    https://jitpack.io/com/github/frohoff/ysoserial/master-SNAPSHOT/ysoserial-master-SNAPSHOT.jar)
+[![GitHub release](https://img.shields.io/github/downloads/frohoff/ysoserial/latest/total)](https://github.com/frohoff/ysoserial/releases/latest/download/ysoserial-all.jar)
 
-Note that GitHub-hosted releases were removed in compliance with the
-[GitHub Community Guidelines](
-    https://help.github.com/articles/github-community-guidelines/#what-is-not-allowed)
+Download the [latest release jar](https://github.com/frohoff/ysoserial/releases/latest/download/ysoserial-all.jar) from GitHub releases.
 
 ## Building
 
