@@ -1,10 +1,8 @@
 name: publish jar
-on:
-  push:
-    tags:
-      - "v*.*.*"
-permissions:
-  contents: write
+on:  
+  workflow_dispatch:  # 手动运行工作流  
+permissions:  
+  contents: write  
 
 jobs:
   publish:
